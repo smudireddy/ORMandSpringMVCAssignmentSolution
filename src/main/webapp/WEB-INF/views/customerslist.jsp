@@ -9,35 +9,39 @@ caption {
 	padding: 20px;
 }
 
-div {
-	height: 100px;
+.divouter {
+	padding-top: 10px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.divheader {
 	background-color: #0A8A0A;
+	text-align: center;
+	height: 80px;
+	align-content: center;
+	padding-top: 10px;
 }
 
 h1 {
 	text-align: left;
 }
 
-#crmheader {
-	text-align: center;
-	width: 80%;
-	font-size: 16px;
-}
-
-#crmheader h1 {
-	vertical-align: middle;
-	text-align: center;
-}
-
 table {
-	width: 80%;
 	border-collapse: collapse;
+	width: 100%;
 }
 
 th, td {
 	text-align: center;
 	padding: 8px;
 	border-width: 0px
+}
+
+th {
+	background-color: #0A8A0A;
+	color: white;
+	font-size: 15pt;
 }
 
 tr:nth-child(even) {
@@ -47,47 +51,60 @@ tr:nth-child(even) {
 h3 {
 	text-align: left;
 }
+
+input[type=submit] {
+	padding: 10px;
+	margin: 4px 2px;
+	background-color: lightgray;
+	font-size: 12pt;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 10px;
+}
 </style>
 
 <title>Customer Relationship Management</title>
 </head>
 <body>
 
-	<div class="crmheader" id="crmheader">
-		<p />
-		<h1>CUSTOMER RELATIONSHIP MANAGEMENT</h1>
-		<p />
-	</div>
-	<br>
-	<br>
-	<br>
+	<div class="divouter">
 
-	<form action="showAddFrom">
-		<input type="submit" value="Add Customer">
-	</form>
-	<br>
-	<c:if test="${!empty customerlist}">
-		<table align="center" border="1">
-			<tr>
-				<th style="background-color: #0A8A0A">First Name</th>
-				<th style="background-color: #0A8A0A">Last Name</th>
-				<th style="background-color: #0A8A0A">Email</th>
-				<th style="background-color: #0A8A0A">Action</th>
-			</tr>
+		<div class="divheader">
+			<h1 style="text-align: center;">CUSTOMER RELATIONSHIP MANAGEMENT</h1>
+		</div>
+		<br> <br> <br>
 
-			<c:forEach items="${customerlist}" var="customer">
+		<form action="showAddFrom" method="get">
+			<input type="submit" value="Add Customer" align="left">
+		</form>
+
+		<br>
+
+		<c:if test="${!empty customerlist}">
+			<table align="left" border="1">
 				<tr>
-					<td><c:out value="${customer.firstName}" /></td>
-					<td><c:out value="${customer.lastName}" /></td>
-					<td><c:out value="${customer.email}" /></td>
-					<td align="center"><a
-						href="showUpdateFrom?customerId=${customer.id}">Edit</a> | <a
-						href="deleteCustomer?customerId=${customer.id}"
-						onclick="if (!confirm('Are you sure you want to delete the student?'))">Delete</a></td>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Action</th>
 				</tr>
-			</c:forEach>
-		</table>
-	</c:if>
 
+				<c:forEach items="${customerlist}" var="customer">
+					<tr>
+						<td><c:out value="${customer.firstName}" /></td>
+						<td><c:out value="${customer.lastName}" /></td>
+						<td><c:out value="${customer.email}" /></td>
+						<td align="center"><a
+							href="showUpdateFrom?customerId=${customer.id}">Edit</a> | <a
+							href="deleteCustomer?customerId=${customer.id}"
+							onclick="if (!confirm('Are you sure you want to delete the student?'))">Delete</a></td>
+					</tr>
+				</c:forEach>
+			</table>
+		</c:if>
+	</div>
 </body>
 </html>
