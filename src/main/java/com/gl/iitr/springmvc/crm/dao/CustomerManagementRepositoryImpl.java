@@ -50,9 +50,9 @@ public class CustomerManagementRepositoryImpl implements CustomerManagementRepos
 
 	@Override
 	public void removeCustomerById(long customerId) {
-		
+
 		Customer customer = entityManager.find(Customer.class, customerId);
-		if(customer != null) {
+		if (customer != null) {
 			entityManager.remove(customer);
 		}
 	}

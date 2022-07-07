@@ -30,15 +30,14 @@ a, label {
 }
 
 .tdinput {
-    width: 45%;   
+	width: 45%;
 	height: 50px;
 }
 
 .tdlable {
-    width: 15%;  
+	width: 15%;
 	height: 50px;
 }
-
 
 input {
 	background-color: #BFD7ED;
@@ -73,7 +72,7 @@ input {
 				<tr>
 					<td class="tdlable"><label>First Name: </label></td>
 					<td class="tdinput"><input type="text" name="firstName"
-						value="${customer.firstName}" required/></td>
+						value="${customer.firstName}" required /></td>
 				</tr>
 
 				<tr>
@@ -83,14 +82,15 @@ input {
 				</tr>
 				<tr>
 					<td class="tdlable"><label>Email: </label></td>
-					<td class="tdinput"><input type="email" name="email" value="${customer.email}" required /></td>
+					<td class="tdinput"><input type="email" name="email"
+						value="${customer.email}" required /></td>
 				</tr>
 				<tr>
-				
+
 				</tr>
 
 				<tr>
-					<td colspan="2" style="text-align:center" align="center"><input
+					<td colspan="2" style="text-align: center" align="center"><input
 						type="submit" value="Save" /></td>
 				</tr>
 
