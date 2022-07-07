@@ -74,7 +74,7 @@ input {
 				<tr>
 					<td class="tdlable"><label>First Name: </label></td>
 					<td class="tdinput"><input type="text" name="firstName"
-						value="${customer.firstName}" /></td>
+						value="${customer.firstName}" required/></td>
 				</tr>
 
 				<tr>
@@ -84,11 +84,14 @@ input {
 				</tr>
 				<tr>
 					<td class="tdlable"><label>Email: </label></td>
-					<td class="tdinput"><input type="email" name="email" value="${customer.email}" /></td>
+					<td class="tdinput"><input type="email" name="email" value="${customer.email}" required /></td>
+				</tr>
+				<tr>
+				
 				</tr>
 
 				<tr>
-					<td colspan="3" style="text-align: center; width: 100px;" align="center"><input
+					<td colspan="3" style="text-align: center;" align="center"><input
 						type="submit" value="Save" /></td>
 				</tr>
 
