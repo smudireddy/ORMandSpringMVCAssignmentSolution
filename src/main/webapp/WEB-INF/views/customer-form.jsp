@@ -30,7 +30,7 @@ a, label {
 }
 
 .tdinput {
-    width: 40%;   
+    width: 45%;   
 	height: 50px;
 }
 
@@ -90,7 +90,7 @@ input {
 				</tr>
 
 				<tr>
-					<td colspan="3" style="text-align:center" align="center"><input
+					<td colspan="2" style="text-align:center" align="center"><input
 						type="submit" value="Save" /></td>
 				</tr>
 
