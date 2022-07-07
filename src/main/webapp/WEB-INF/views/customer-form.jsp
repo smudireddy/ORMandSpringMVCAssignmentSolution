@@ -30,12 +30,12 @@ a, label {
 }
 
 .tdinput {
-    width: 300px;   
+    width: 40%;   
 	height: 50px;
 }
 
 .tdlable {
-    width: 100px;  
+    width: 15%;  
 	height: 50px;
 }
 
@@ -45,7 +45,6 @@ input {
 	font-size: 12pt;
 	border: 1px;
 	border-radius: 10px;
-	size: 30;
 	padding: 10px;
 }
 </style>
@@ -91,7 +90,7 @@ input {
 				</tr>
 
 				<tr>
-					<td colspan="3" style="text-align: center;" align="center"><input
+					<td colspan="3" style="text-align:center" align="center"><input
 						type="submit" value="Save" /></td>
 				</tr>
 
