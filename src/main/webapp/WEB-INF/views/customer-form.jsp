@@ -7,26 +7,46 @@
 <head>
 
 <style type="text/css">
-caption {
-	padding: 20px;
+.divouter {
+	padding-top: 10px;
+	padding-left: 100px;
+	padding-right: 100px;
 }
 
-div {
-	height: 100px;
+.divheader {
 	background-color: #0A8A0A;
+	text-align: center;
+	height: 80px;
+	align-content: center;
+	padding-top: 10px;
 }
 
 h1 {
 	text-align: left;
 }
 
-#crmheader {
-	text-align: center;
-	width: 100%;
+a, label {
+	font-size: 12pt;
 }
 
-#crmheader h1 {
-	vertical-align: middle
+.tdinput {
+    width: 300px;   
+	height: 50px;
+}
+
+.tdlable {
+    width: 100px;  
+	height: 50px;
+}
+
+
+input {
+	background-color: #BFD7ED;
+	font-size: 12pt;
+	border: 1px;
+	border-radius: 10px;
+	size: 30;
+	padding: 10px;
 }
 </style>
 
@@ -35,49 +55,50 @@ h1 {
 </head>
 <body>
 
-	<div class="crmheader" id="crmheader">
-		<h1>CUSTOMER RELATIONSHIP MANAGEMENT</h1>
+	<div class="divouter">
+		<div class="divheader">
+			<h1 style="text-align: center; color: white;">CUSTOMER
+				RELATIONSHIP MANAGEMENT</h1>
+		</div>
+		<br> <br> <br>
+
+		<h3>Save Customer</h3>
+		<form method="POST" action="saveCustomer">
+			<table>
+
+				<tr>
+					<td><input type="hidden" name="customerId"
+						value="${customer.id}" /></td>
+				</tr>
+
+				<tr>
+					<td class="tdlable"><label>First Name: </label></td>
+					<td class="tdinput"><input type="text" name="firstName"
+						value="${customer.firstName}" /></td>
+				</tr>
+
+				<tr>
+					<td class="tdlable"><label>Last Name: </label></td>
+					<td class="tdinput"><input type="text" name="lastName"
+						value="${customer.lastName}" /></td>
+				</tr>
+				<tr>
+					<td class="tdlable"><label>Email: </label></td>
+					<td class="tdinput"><input type="email" name="email" value="${customer.email}" /></td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="text-align: center; width: 100px;" align="center"><input
+						type="submit" value="Save" /></td>
+				</tr>
+
+			</table>
+		</form>
+		<br>
+		<h3>
+			<a href="list">Back to List</a>
+		</h3>
 	</div>
-	<br>
-	<br>
-	<br>
-
-	<h3>Save Customer</h3>
-	<form method="POST" action="saveCustomer">
-		<table>
-
-			<tr>
-			    <td><input type="hidden" name="customerId"
-					value="${customer.id}" /></td>
-			</tr>
-
-			<tr>
-				<td><label>First Name: </label></td>
-				<td><input type="text" name="firstName"
-					value="${customer.firstName}" size="100"/></td>
-			</tr>
-
-			<tr>
-				<td><label>Last Name: </label></td>
-				<td><input type="text" name="lastName"
-					value="${customer.lastName}" size="100"/></td>
-			</tr>
-			<tr>
-				<td><label>Email: </label></td>
-				<td><input type="email" name="email" value="${customer.email}" size="100"/></td>
-			</tr>
-
-			<tr>
-				<td colspan="3" style="text-align: center" align="center"><input
-					type="submit" value="Save" /></td>
-			</tr>
-
-		</table>
-	</form>
-	<br>
-	<h3>
-		<a href="list">Back to List</a>
-	</h3>
 
 </body>
 </html>

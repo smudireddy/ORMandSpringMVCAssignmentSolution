@@ -35,13 +35,18 @@ table {
 th, td {
 	text-align: center;
 	padding: 8px;
-	border-width: 0px
+	border-width: 0px;
+	font-size: 12pt;
 }
 
 th {
 	background-color: #0A8A0A;
 	color: white;
 	font-size: 15pt;
+}
+
+a {
+	font-size: 12pt;
 }
 
 tr:nth-child(even) {
@@ -54,7 +59,7 @@ h3 {
 
 input[type=submit] {
 	padding: 10px;
-	margin: 4px 2px;
+	margin: 10px 2px;
 	background-color: lightgray;
 	font-size: 12pt;
 	border: none;
@@ -98,7 +103,7 @@ input[type=submit] {
 						<td><c:out value="${customer.lastName}" /></td>
 						<td><c:out value="${customer.email}" /></td>
 						<td align="center"><a
-							href="showUpdateFrom?customerId=${customer.id}">Edit</a> | <a
+							href="showUpdateFrom?customerId=${customer.id}">Update</a> | <a
 							href="deleteCustomer?customerId=${customer.id}"
 							onclick="if (!confirm('Are you sure you want to delete the student?'))">Delete</a></td>
 					</tr>
